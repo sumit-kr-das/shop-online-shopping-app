@@ -98,7 +98,7 @@ export const products = [
   },
   {
     img: "https://borobazar.vercel.app/_next/image?url=%2Fassets%2Fimages%2Fproducts%2Fp-9-1.png&w=750&q=75",
-    title: "Fresh Cilantro",
+    title: "Fresh Cilantro Fresh Cilantro",
     oldPrice: "$2.74",
     newPricw: "$2.50",
     des: "Vegetables are parts of plants that are consumed by humans or other animals as food. the first meaning remains commonly used and is applied to plants collectively to ask all edible plant matter, including the flowers, fruits, stems, leaves, roots",
@@ -115,8 +115,8 @@ export const products = [
     tgs: ["Fresh food", "Organic", "Cilantro", "Dry Food"],
   },
   {
-    img: "",
-    title: "",
+    img: "https://borobazar.vercel.app/_next/image?url=%2Fassets%2Fimages%2Fproducts%2Fp-33-1.png&w=750&q=75",
+    title: "Pop Secret Movie Theater",
     oldPrice: "$2.74",
     newPricw: "$2.50",
     des: "Vegetables are parts of plants that are consumed by humans or other animals as food. the first meaning remains commonly used and is applied to plants collectively to ask all edible plant matter, including the flowers, fruits, stems, leaves, roots",

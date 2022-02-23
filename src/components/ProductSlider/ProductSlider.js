@@ -27,12 +27,13 @@ const responsive = {
 
 const ProductSlider = () => {
   return (
-    <Box sx={{ margin: "4rem 1rem"}}>
-      <Carousel 
-      responsive={responsive}
+    <Box sx={{ margin: "4rem 1rem" }}>
+      <Carousel
+        responsive={responsive}
         autoPlay={true}
         autoPlaySpeed={2000}
         removeArrowOnDeviceType={["desktop"]}
+        infinite={true}
       >
         {data2.map((data, index) => (
           <Box
@@ -47,7 +48,7 @@ const ProductSlider = () => {
               borderRadius: "5px",
               padding: "10px 15px 10px 10px",
               mx: 1,
-              ml: {xs: 6}
+              ml: { xs: 6 },
             }}
             key={index}
           >

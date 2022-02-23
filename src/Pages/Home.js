@@ -4,6 +4,7 @@ import Header from "../components/Header/Header";
 import CategorySlider from "../components/CategorySlider/CategorySlider";
 import HeadingComponent from "../components/Heading/HeadingComponent";
 import ProductSlider from "../components/ProductSlider/ProductSlider";
+import Product from "../components/Product/Product";
 
 const Home = () => {
   return (
@@ -20,6 +21,7 @@ const Home = () => {
         heading="Best seller grocery near you"
         des= "We provide best quality & fresh grocery items near your location"
       />
+      <Product />
     </>
   );
 };
