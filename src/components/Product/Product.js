@@ -29,16 +29,17 @@ const Product = () => {
             display: "flex",
             alignItems: "center",
             flexDirection: "column",
+              Width: "300px",
+              height: "300px",
           }}
           key={index}
         >
           <Card
             sx={{
-              Width: "250px",
+              Width: "300px",
               height: "300px",
               border: "1px solid #ececec",
               borderRadius: "5px",
-              padding: {md: "10px", xs:0}
             }}
           >
             <CardActionArea>
@@ -50,6 +51,7 @@ const Product = () => {
                 sx={{
                   transition: "0.5s",
                   "&:hover": { transform: "scale(1.1)" },
+                  objectFit: "contain"
                 }}
               />
               <CardContent>
@@ -70,6 +72,7 @@ const Product = () => {
                     alignItems: "center",
                     justifyContent: "space-between",
                     mt: 2,
+                    mb: 4
                   }}
                 >
                   <Typography sx={{ color: "#7E7E7E" }}>{data.qty}</Typography>

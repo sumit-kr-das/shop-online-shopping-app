@@ -178,3 +178,4 @@ export const products = [
     tgs: ["Fresh food", "Organic", "Cilantro", "Dry Food"],
   },
 ];
+
