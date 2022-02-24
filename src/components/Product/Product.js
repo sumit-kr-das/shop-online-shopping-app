@@ -1,6 +1,7 @@
 import React from "react";
+import { products } from "../../constants/data";
+import { styles } from "../../constants/styles";
 import {
-  Box,
   Card,
   CardActionArea,
   CardContent,
@@ -8,87 +9,81 @@ import {
   Grid,
   Typography,
 } from "@mui/material";
-import { products } from "../../constants/data";
-import AddShoppingCartOutlinedIcon from "@mui/icons-material/AddShoppingCartOutlined";
+import { Box } from "@mui/system";
+import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 
 const Product = () => {
   return (
-    <Grid
-      container
-      spacing={3}
-      alignItems="center"
-      sx={{ px: { xs: 1, md: 4 } }}
-    >
-      {products.map((data, index) => (
-        <Grid
-          item
-          lg={2.4}
-          sm={4}
-          xs={6}
-          sx={{
-            display: "flex",
-            alignItems: "center",
-            flexDirection: "column",
-              Width: "300px",
-              height: "300px",
-          }}
-          key={index}
-        >
-          <Card
-            sx={{
-              Width: "300px",
-              height: "300px",
-              border: "1px solid #ececec",
-              borderRadius: "5px",
-            }}
-          >
+    <Grid container spacing={3} alignItems="center" sx={{padding: "0 10px"}}  >
+      {
+        products.map((data,index)=>(
+          <Grid item key={index} xs={6} md={2.4} sx={{display: "flex", alignItems: "center", flexDirection: "column", justifyContent: "center"}}>
+          <Card sx={{ maxWidth: 200, border: "1px solid #ececec" }}>
             <CardActionArea>
               <CardMedia
                 component="img"
                 height="140"
                 image={data.img}
-                alt="product-image"
+                alt="green iguana"
                 sx={{
                   transition: "0.5s",
                   "&:hover": { transform: "scale(1.1)" },
-                  objectFit: "contain"
                 }}
               />
               <CardContent>
-                <Box sx={{ display: "flex", alignItems: "center", mb: 1 }}>
-                  <Typography sx={{ fontWeight: "bold" }}>
+                <Box
+                  sx={[styles.alignCenter, { justifyContent: "space-between" }]}
+                >
+                  <Typography
+                    gutterBottom
+                    component="div"
+                    sx={{ fontWeight: "bold" }}
+                  >
+                    {products[1].newPricw}
+                  </Typography>
+                  <Typography
+                    gutterBottom
+                    component="div"
+                    sx={{ textDecoration: "line-through" }}
+                  >
                     {data.newPricw}
                   </Typography>
-                  <Typography sx={{ ml: 1, textDecoration: "line-through" }}>
-                    {data.oldPrice}
-                  </Typography>
                 </Box>
-                <Typography gutterBottom component="div">
+                <Typography variant="body2" color="text.primary">
                   {data.title}
                 </Typography>
                 <Box
-                  sx={{
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "space-between",
-                    mt: 2,
-                    mb: 4
-                  }}
+                  sx={[
+                    styles.alignCenter,
+                    { justifyContent: "space-between", mt: 2 },
+                  ]}
                 >
-                  <Typography sx={{ color: "#7E7E7E" }}>{data.qty}</Typography>
-                  <AddShoppingCartOutlinedIcon
-                    sx={{
-                      transition: "0.5s",
-                      zIndex: "10",
-                      "&:hover": { transform: "scale(1.1)", color: "#02B290" },
-                    }}
-                  />
+                  <Typography
+                    gutterBottom
+                    component="div"
+                    sx={{ color: styles.colors.secondaryText }}
+                  >
+                    {data.qty}
+                  </Typography>
+                  <Typography
+                    gutterBottom
+                    component="div"
+                    sx={{ textDecoration: "line-through" }}
+                  >
+                    <AddShoppingCartIcon
+                      sx={{
+                        transition: "0.5s",
+                        "&:hover": { transform: "scale(1.2)", color: "#02B290" },
+                      }}
+                    />
+                  </Typography>
                 </Box>
               </CardContent>
             </CardActionArea>
           </Card>
         </Grid>
-      ))}
+        ))
+      }
     </Grid>
   );
 };

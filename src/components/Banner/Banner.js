@@ -9,7 +9,7 @@ const Banner = () => {
         width: "100%",
         objectFit: "contain",
         px: 4,
-        py: 8
+        pt: 8
     }}/>
   )
 }

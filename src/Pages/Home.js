@@ -6,6 +6,7 @@ import HeadingComponent from "../components/Heading/HeadingComponent";
 import ProductSlider from "../components/ProductSlider/ProductSlider";
 import Product from "../components/Product/Product";
 import Banner from "../components/Banner/Banner";
+import Support from "../components/Support/Support";
 
 const Home = () => {
   return (
@@ -29,6 +30,7 @@ const Home = () => {
         des= "We provide best quality & fresh grocery items near your location"
       />
       <Product />
+      <Support />
     </>
   );
 };
