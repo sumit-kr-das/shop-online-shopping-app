@@ -7,6 +7,8 @@ import ProductSlider from "../components/ProductSlider/ProductSlider";
 import Product from "../components/Product/Product";
 import Banner from "../components/Banner/Banner";
 import Support from "../components/Support/Support";
+import Footer from "../components/Footer/Footer";
+
 
 const Home = () => {
   return (
@@ -31,6 +33,7 @@ const Home = () => {
       />
       <Product />
       <Support />
+      <Footer />
     </>
   );
 };
