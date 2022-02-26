@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { products } from "../../constants/data";
 import { styles } from "../../constants/styles";
 import {
@@ -11,14 +11,17 @@ import {
 } from "@mui/material";
 import { Box } from "@mui/system";
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
+import ProductDetails from "../ProductDetails/ProductDetails";
 
 const Product = () => {
+  const [showDialog, setShowDialog] = useState(false);
   return (
+    <>
     <Grid container spacing={3} alignItems="center" sx={{padding: "0 10px"}}  >
       {
         products.map((data,index)=>(
           <Grid item key={index} xs={6} md={2.4} sx={{display: "flex", alignItems: "center", flexDirection: "column", justifyContent: "center"}}>
-          <Card sx={{ maxWidth: 200, border: "1px solid #ececec" }}>
+          <Card sx={{ maxWidth: 200, border: "1px solid #ececec" }} onClick = { () =>  {setShowDialog(true)}}>
             <CardActionArea>
               <CardMedia
                 component="img"
@@ -85,6 +88,8 @@ const Product = () => {
         ))
       }
     </Grid>
+    <ProductDetails showDialog={showDialog} setShowDialog={setShowDialog} />
+    </>
   );
 };
 
