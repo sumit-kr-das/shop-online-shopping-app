@@ -21,8 +21,8 @@ const Product = () => {
       {
         products.map((data,index)=>(
           <Grid item key={index} xs={6} md={2.4} sx={{display: "flex", alignItems: "center", flexDirection: "column", justifyContent: "center"}}>
-          <Card sx={{ maxWidth: 200, border: "1px solid #ececec" }} onClick = { () =>  {setShowDialog(true)}}>
-            <CardActionArea>
+          <Card sx={{ maxWidth: 200, border: "1px solid #ececec",cursor: "pointer" }}>
+            <Box>
               <CardMedia
                 component="img"
                 height="140"
@@ -32,6 +32,7 @@ const Product = () => {
                   transition: "0.5s",
                   "&:hover": { transform: "scale(1.1)" },
                 }}
+                onClick = { () =>  {setShowDialog(true)}}
               />
               <CardContent>
                 <Box
@@ -52,7 +53,7 @@ const Product = () => {
                     {data.newPricw}
                   </Typography>
                 </Box>
-                <Typography variant="body2" color="text.primary">
+                <Typography variant="body2" color="text.primary" sx={{ transition: "0.4s","&:hover": {color: "#02B290"}}} onClick = { () =>  {setShowDialog(true)}}>
                   {data.title}
                 </Typography>
                 <Box
@@ -82,7 +83,7 @@ const Product = () => {
                   </Typography>
                 </Box>
               </CardContent>
-            </CardActionArea>
+            </Box>
           </Card>
         </Grid>
         ))
