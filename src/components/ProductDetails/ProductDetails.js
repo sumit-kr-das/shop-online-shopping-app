@@ -25,11 +25,10 @@ const ProductDetails = ({ showDialog, setShowDialog }) => {
       }}
       maxWidth="lg"
     >
-      <DialogTitle>This is Dilog</DialogTitle>
       <DialogContent>
-        <Grid container>
+        <Grid container sx={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
           {/* Product Carousel */}
-          <Grid item md={6}>
+          <Grid item md={6} >
             <ProductSlider image={productDetails} />
           </Grid>
           {/* Product Details */}
