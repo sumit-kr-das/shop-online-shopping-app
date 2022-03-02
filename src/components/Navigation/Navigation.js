@@ -10,17 +10,19 @@ import {
   IconButton,
   useMediaQuery,
   useTheme,
+  MenuItem,
 } from "@mui/material";
 import AddShoppingCartOutlinedIcon from "@mui/icons-material/AddShoppingCartOutlined";
 import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined";
 import MenuIcon from "@mui/icons-material/Menu";
 import { styles } from "../../constants/styles";
+import { Link } from "react-router-dom";
 
 const menuStyle = {
-  padding: "5px 10px",
-  borderRadius: "5px",
-  "&:hover": { background: "#F3F6F9" },
-  mr: 2,
+  // padding: "5px 10px",
+  // borderRadius: "5px",
+  // "&:hover": { background: "#F3F6F9" },
+  // mr: 2,
   cursor: "pointer",
   transition: "0.6s",
   fontFamily: "'Inter',arial",
@@ -46,10 +48,18 @@ const Navigation = () => {
             />
           ) : (
             <Box sx={styles.alignCenter}>
-              <Box sx={menuStyle}>Home</Box>
-              <Box sx={menuStyle}>Products</Box>
-              <Box sx={menuStyle}>About</Box>
-              <Box sx={menuStyle}>Contact</Box>
+              <MenuItem autoFocus={false} component={Link} to="/">
+                <Box sx={menuStyle}>Home</Box>
+              </MenuItem>
+              <MenuItem autoFocus={false} component={Link} to="/products">
+                <Box sx={menuStyle}>Products</Box>
+              </MenuItem>
+              <MenuItem autoFocus={false} component={Link} to="/">
+                <Box sx={menuStyle}>About</Box>
+              </MenuItem>
+              <MenuItem autoFocus={false} component={Link} to="/">
+                <Box sx={menuStyle}>Contact</Box>
+              </MenuItem>
             </Box>
           )}
         </Box>
