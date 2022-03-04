@@ -33,7 +33,7 @@ const Navigation = () => {
   const theme = useTheme();
   const matches = useMediaQuery(theme.breakpoints.down("sm"));
   return (
-    <AppBar color="inherit" elevation={0}>
+    <AppBar color="inherit" elevation={1}>
       <Toolbar sx={[styles.alignCenter, { justifyContent: "space-between" }]}>
         <Box sx={styles.alignCenter}>
           <Box

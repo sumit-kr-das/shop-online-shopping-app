@@ -179,3 +179,25 @@ export const products = [
   },
 ];
 
+export const category = [
+  {
+    name: "Fresh Vegetables",
+    img: "https://borobazar.vercel.app/assets/images/category/icon/fresh-vegetables.svg"
+  },
+  {
+    name: "Diet Nutration",
+    img: "https://borobazar.vercel.app/assets/images/category/icon/diet-nutrition.svg"
+  },
+  {
+    name: "Fast Food Items",
+    img: "https://borobazar.vercel.app/assets/images/category/icon/fast-food.svg"
+  },
+  {
+    name: "",
+    img: ""
+  },
+  {
+    name: "",
+    img: ""
+  },
+];
