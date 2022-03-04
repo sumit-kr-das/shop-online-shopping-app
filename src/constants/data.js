@@ -193,11 +193,11 @@ export const category = [
     img: "https://borobazar.vercel.app/assets/images/category/icon/fast-food.svg"
   },
   {
-    name: "",
-    img: ""
+    name: "https://borobazar.vercel.app/assets/images/category/icon/fruits-items.svg",
+    img: "Fruits Items"
   },
   {
-    name: "",
-    img: ""
+    name: "https://borobazar.vercel.app/assets/images/category/icon/cookies-biscuits.svg",
+    img: "Cookies & Biscuits"
   },
 ];
