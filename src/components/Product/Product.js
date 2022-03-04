@@ -3,7 +3,6 @@ import { products } from "../../constants/data";
 import { styles } from "../../constants/styles";
 import {
   Card,
-  CardActionArea,
   CardContent,
   CardMedia,
   Grid,
