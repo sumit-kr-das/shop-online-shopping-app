@@ -1,32 +1,75 @@
-import React from 'react';
-import { Box, Button, Container, TextField, Typography } from '@mui/material';
-import { Link } from 'react-router-dom';
+import React from "react";
+import {
+  Box,
+  Button,
+  Checkbox,
+  Container,
+  FormControlLabel,
+  Grid,
+  TextField,
+  Typography,
+} from "@mui/material";
+import { Link } from "react-router-dom";
+import KeyboardBackspaceIcon from '@mui/icons-material/KeyboardBackspace';
 
-const Login = () => {
+import { styles } from "../../constants/styles";
+
+const mainImg =
+  "https://borobazar.vercel.app/_next/image?url=%2Fassets%2Fimages%2Fregistration.png&w=828&q=75";
+
+const Signup = () => {
   return (
-    <Container maxWidth="lg" sx={{ display: "flex",flexDirection: "column", alignItems: "center", mt:4 }}>
-    <Typography variant="h4">Create an Account</Typography>
-    <Typography>Don't have an account? <Link to="/signup"> Create here</Link></Typography>
-    <Box sx={{display: "block"}}>
+    <Container
+      maxWidth="xl"
+      sx={[styles.flexCenter, { height: "100vh" }]}
+    >
+      <Grid container justifyContent="center">
+        <Grid item xs={12} md={4}>
+          <Box
+            component="img"
+            src={mainImg}
+            sx={{ width: "100%", height: "100%", objectFit: "cover" }}
+          />
+        </Grid>
+        <Grid
+          item
+          xs={12}
+          md={4}
+          sx={{ textAlign: "center", mt: { xs: 2, md: 0 } }}
+        >
+          <Typography variant="h4">Login</Typography>
+          <Typography sx={{ mt: 1 }}>
+            Don’t have an account?{" "}
+            <Link
+              to="/signup"
+              style={{
+                color: "#02B290",
+                textDecoration: "none",
+                fontWeight: "bold",
+              }}
+            >
+              Create Account
+            </Link>
+          </Typography>
+          <Box sx={{ display: "flex", flexDirection: "column", p: 2 }}>
+            <TextField
+              required
+              id="outlined-required"
+              label="Username"
+              sx={{ mt: 2, mb: 1 }}
+            />
+            <TextField
+              required
+              id="outlined-required"
+              label="Password"
+              sx={{ mt: 1, mb: 4 }}
+            />
+            <Box sx={styles.buttonPrimary}>Login</Box>
+          </Box>
+        </Grid>
+      </Grid>
+    </Container>
+  );
+};
 
-        <TextField
-        required
-        id="outlined-required"
-        label="Username"
-        sx={{display: "block", mt:2, mb:1 }}
-        />
-       
-        <TextField
-        required
-        id="outlined-required"
-        label="Password"
-        sx={{display: "block", my:1}}
-        />
-
-        <Button variant='contained'>Login</Button>
-    </Box>
-</Container>
-  )
-}
-
-export default Login
+export default Signup;
