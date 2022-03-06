@@ -10,11 +10,13 @@ import {
 } from "@mui/material";
 import Navigation from "../components/Navigation/Navigation";
 import Categories from "../components/Categories/Categories";
-import Product from "../components/Product/Product";
+import Products from '../components/Products/Products';
 
 import { category } from "../constants/data";
 import Support from "../components/Support/Support";
 import Footer from "../components/Footer/Footer";
+
+import { products } from "../constants/data";
 
 const ProductPage = () => {
   const [age, setAge] = useState("");
@@ -42,7 +44,7 @@ const ProductPage = () => {
               </Select>
             </FormControl>
           </Box>
-          <Product />
+          <Products />
         </Grid>
         {/* support section */}
         <Support />

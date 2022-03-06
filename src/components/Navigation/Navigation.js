@@ -64,12 +64,12 @@ const Navigation = () => {
           )}
         </Box>
         <Box sx={styles.alignCenter}>
-          <Box sx={[styles.alignCenter, { marginRight: 1 }]}>
+          <MenuItem autoFocus={false} component={Link} to="/cart" sx={[styles.alignCenter, { marginRight: 1 }]}>
             <Badge badgeContent={4} color="primary">
               <AddShoppingCartOutlinedIcon />
             </Badge>
             <Typography sx={{ ml: 1 }}>Cart</Typography>
-          </Box>
+          </MenuItem>
           {matches ? (
             <IconButton
               sx={{ ml: 1 }}

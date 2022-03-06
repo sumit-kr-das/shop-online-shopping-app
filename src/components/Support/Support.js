@@ -2,7 +2,8 @@ import { Grid, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import React from "react";
 
-const mainImg = "https://borobazar.vercel.app/_next/image?url=%2Fassets%2Fimages%2Fapp-thumbnail-2.png&w=750&q=100";
+// const mainImg = "https://borobazar.vercel.app/_next/image?url=%2Fassets%2Fimages%2Fapp-thumbnail-2.png&w=750&q=100";
+const mainImg = "https://cdn.shopify.com/s/files/1/0108/7370/0415/t/9/assets/section-bgimage-layer1.png?v=4675554602131987983";
 const androidImg = "https://borobazar.vercel.app/_next/image?url=%2Fassets%2Fimages%2Fplay-store.png&w=256&q=75";
 const iosImg = "https://borobazar.vercel.app/_next/image?url=%2Fassets%2Fimages%2Fplay-store.png&w=256&q=75";
 
