@@ -80,10 +80,10 @@ const Navigation = () => {
               <MenuIcon />
             </IconButton>
           ) : (
-            <Box sx={styles.alignCenter}>
+            <MenuItem component={Link} to="/login" sx={styles.alignCenter}>
               <AccountCircleOutlinedIcon />
               <Typography sx={{ ml: 1 }}>Sign in</Typography>
-            </Box>
+            </MenuItem>
           )}
         </Box>
       </Toolbar>

@@ -10,7 +10,7 @@ import {
   Typography,
 } from "@mui/material";
 import { Link } from "react-router-dom";
-import KeyboardBackspaceIcon from '@mui/icons-material/KeyboardBackspace';
+import KeyboardBackspaceIcon from "@mui/icons-material/KeyboardBackspace";
 
 import { styles } from "../../constants/styles";
 
@@ -19,23 +19,36 @@ const mainImg =
 
 const Signup = () => {
   return (
-    <Container
-      maxWidth="xl"
-      sx={[styles.flexCenter, { height: "100vh" }]}
-    >
+    <Container maxWidth="xl" sx={[styles.flexCenter, { height: "100vh" }]}>
       <Grid container justifyContent="center">
         <Grid item xs={12} md={4}>
           <Box
             component="img"
             src={mainImg}
-            sx={{ width: "100%", height: "100%", objectFit: "cover" }}
+            sx={{
+              width: "100%",
+              height: "100%",
+              objectFit: "cover",
+              border: "1px solid #ececec",
+              borderRight: "none",
+              borderTopLeftRadius: "1rem",
+              borderBottomLeftRadius: "1rem"
+            }}
           />
         </Grid>
         <Grid
           item
           xs={12}
           md={4}
-          sx={{ textAlign: "center", mt: { xs: 2, md: 0 } }}
+          sx={{
+            textAlign: "center",
+            mt: { xs: 2, md: 0 },
+            border: "1px solid #ececec",
+            borderLeft: "none",
+            pt: 4,
+            borderTopRightRadius: "1rem",
+            borderBottomRightRadius: "1rem"
+          }}
         >
           <Typography variant="h4">Login</Typography>
           <Typography sx={{ mt: 1 }}>

@@ -4,10 +4,7 @@ import ProductDescription from "./ProductDescription";
 import {
   Dialog,
   DialogContent,
-  DialogContentText,
-  DialogTitle,
   Grid,
-  Typography,
 } from "@mui/material";
 
 const productDetails = {
